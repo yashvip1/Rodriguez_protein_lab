@@ -16,7 +16,6 @@ lab-website/
 ├── main.js             ← Nav interactions + scroll animations
 ├── images/             ← CREATE this folder and add your photos here
 │   ├── pi-photo.jpg
-│   ├── claus-horn.jpg
 │   ├── postdoc-1.jpg … postdoc-3.jpg
 │   ├── grad-1.jpg … grad-3.jpg
 │   ├── undergrad-1.jpg
@@ -32,7 +31,7 @@ lab-website/
 └── README.md
 ```
 
-## 🚀 Deploy to GitHub Pages
+## Deploy to GitHub Pages
 
 1. Create a GitHub repo named `rodriguezmartinez-lab` (or `yourusername.github.io` for a root site)
 2. Upload ALL files, keeping the folder structure
@@ -41,11 +40,11 @@ lab-website/
 
 ---
 
-## ✏️ Customization Checklist
+## Customization Checklist
 
 Search for `[` in any HTML file to find all placeholders. Here's a summary:
 
-### 🔴 Essential — do these first
+### Essential — do these first
 
 - [ ] **PI photo** — save as `images/pi-photo.jpg` (appears on Home + People pages)
 - [ ] **Team photos** — save as `images/postdoc-1.jpg`, `images/grad-1.jpg`, etc.
@@ -54,7 +53,7 @@ Search for `[` in any HTML file to find all placeholders. Here's a summary:
 - [ ] **News items** — replace `[Mon YYYY]` placeholder news in `index.html` with real updates
 - [ ] **Lab member names** — replace `[Postdoc Full Name]`, `[Student Full Name]`, etc. in `people.html`
 
-### 🟡 Important — fill in when you have the info
+### Important — fill in when you have the info
 
 - [ ] **Recent publications** — replace `[YYYY]` placeholder pub in `index.html` and `publications.html` with newest papers from Google Scholar
 - [ ] **Funding** — replace `[Grant Agency & Number]` / `[Grant Title]` in `research.html`
@@ -65,7 +64,7 @@ Search for `[` in any HTML file to find all placeholders. Here's a summary:
 - [ ] **Mailing address** — confirm correct PO Box in `contact.html`
 - [ ] **Stat numbers** — update `[#]` lab members count in the Yale strip on `index.html`
 
-### 🟢 Optional
+### Optional
 
 - [ ] **Twitter/X handle** — add real URL in `contact.html`
 - [ ] **GitHub org** — add lab GitHub URL in `contact.html`
@@ -73,7 +72,7 @@ Search for `[` in any HTML file to find all placeholders. Here's a summary:
 
 ---
 
-## 🖼️ Photo Tips
+## Photo Tips
 
 - **PI headshot**: ideally 480×640px or 3:4 ratio, JPG
 - **Team photos**: square (400×400px) works best for the grid
@@ -84,7 +83,7 @@ All images have `onerror` fallbacks so the site won't break while photos are pen
 
 ---
 
-## 🎨 Design Notes
+## Design Notes
 
 - **Colors**: Yale Blue `#00356B` · Yale Gold `#C0973B` · Sky Blue `#286DC0`
 - **Fonts**: Cormorant Garamond (headings) · DM Sans (body) · DM Mono (labels/tags)
