@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People — Rodríguez Martínez Lab · Yale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">Rodríguez Martínez Lab</span>
+        <span class="logo-sub">Yale School of Medicine</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html" class="active">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-eyebrow">The Team</p>
+      <h1>People</h1>
+      <p>A diverse, interdisciplinary group united by curiosity about the immune system and a passion for rigorous, creative science.</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- PI -->
+    <section class="people-section" id="pi" style="padding-bottom:40px;">
+      <div class="container">
+        <p class="section-label">Principal Investigator</p>
+        <div class="pi-grid fade-in" style="margin-top:24px; grid-template-columns: 280px 1fr; gap:56px;">
+          <div class="pi-image-wrap">
+            <div class="pi-image-frame" style="aspect-ratio:3/4;">
+              <!-- REPLACE: save photo as images/pi-photo.jpg -->
+              <img src="images/pi-photo.jpg" alt="Prof. María Rodríguez Martínez" class="pi-photo"
+                   onerror="this.src='https://placehold.co/480x640/00356B/ffffff?text=Photo+Coming+Soon'" />
+            </div>
+            <div class="pi-image-accent"></div>
+          </div>
+          <div class="pi-text">
+            <h2 class="pi-name">Prof. María Rodríguez Martínez</h2>
+            <p class="pi-title-line">Associate Professor · Dept. of Biomedical Informatics &amp; Data Science · Yale School of Medicine</p>
+            <p class="pi-bio">Prof. Rodríguez Martínez earned her PhD in physics at the Institut d'Astrophysique de Paris. She completed postdoctoral training at the Weizmann Institute of Science (Israel) and Columbia University (USA), then spent over a decade at IBM Research Europe (Switzerland) as Technical Leader of Systems Biology. She joined Yale School of Medicine in May 2024.</p>
+            <p class="pi-bio">Her research bridges state-of-the-art deep learning — transformers, structural predictors, generative AI — with biophysics and computational immunology to decode how immune receptors function in cancer and autoimmunity. She also co-leads the Center for Systems and Engineering Immunology (CSEI) activities at Yale.</p>
+            <p class="pi-bio"><strong>Education:</strong> PhD Physics, Institut d'Astrophysique de Paris &nbsp;·&nbsp; Postdoc, Weizmann Institute &amp; Columbia University</p>
+            <div class="pi-links">
+              <a href="mailto:[REPLACE-EMAIL]@yale.edu" class="link-arrow">Email →</a>
+              <a href="https://scholar.google.com/citations?user=PjKglDoAAAAJ" target="_blank" class="link-arrow">Google Scholar →</a>
+              <a href="https://medicine.yale.edu/profile/maria-rodriguezmartinez/" target="_blank" class="link-arrow">Yale Profile →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Associate Research Scientist (Claus Horn is mentioned publicly) -->
+    <section class="people-section" style="padding-top:56px; padding-bottom:40px; background:var(--surface);">
+      <div class="container">
+        <p class="section-label">Research Scientists</p>
+        <div class="people-grid" style="margin-top:24px;">
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <!-- REPLACE: save photo as images/claus-horn.jpg -->
+              <img src="images/claus-horn.jpg" alt="Dr. Claus Horn" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/286DC0/ffffff?text=Claus+Horn'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">Dr. Claus Horn</p>
+              <p class="person-role pi">Associate Research Scientist</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">Machine learning · Biomedical applications · AI</p>
+            </div>
+          </div>
+          <!-- REPLACE: add more research scientists as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTDOCS -->
+    <section class="people-section" style="padding-bottom:40px;">
+      <div class="container">
+        <p class="section-label">Postdoctoral Researchers</p>
+        <div class="people-grid" style="margin-top:24px;">
+          <!-- REPLACE: add real postdoc entries below. Copy the block for each person. -->
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <img src="images/postdoc-1.jpg" alt="[Postdoc Name]" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/e4e6ea/6b7280?text=[Photo]'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">[Postdoc Full Name]</p>
+              <p class="person-role">Postdoctoral Associate</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">[Research focus · Methods]</p>
+            </div>
+          </div>
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <img src="images/postdoc-2.jpg" alt="[Postdoc Name]" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/e4e6ea/6b7280?text=[Photo]'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">[Postdoc Full Name]</p>
+              <p class="person-role">Postdoctoral Associate</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">[Research focus · Methods]</p>
+            </div>
+          </div>
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <img src="images/postdoc-3.jpg" alt="[Postdoc Name]" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/e4e6ea/6b7280?text=[Photo]'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">[Postdoc Full Name]</p>
+              <p class="person-role">Postdoctoral Associate</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">[Research focus · Methods]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAD STUDENTS -->
+    <section class="people-section" style="padding-bottom:40px; background:var(--surface);">
+      <div class="container">
+        <p class="section-label">Graduate Students</p>
+        <div class="people-grid" style="margin-top:24px;">
+          <!-- REPLACE: add real grad student entries. Copy the block for each person. -->
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <img src="images/grad-1.jpg" alt="[Student Name]" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/e4e6ea/6b7280?text=[Photo]'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">[Student Full Name]</p>
+              <p class="person-role">PhD Student · [Year] year</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">[Research focus]</p>
+            </div>
+          </div>
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <img src="images/grad-2.jpg" alt="[Student Name]" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/e4e6ea/6b7280?text=[Photo]'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">[Student Full Name]</p>
+              <p class="person-role">PhD Student · [Year] year</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">[Research focus]</p>
+            </div>
+          </div>
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <img src="images/grad-3.jpg" alt="[Student Name]" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/e4e6ea/6b7280?text=[Photo]'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">[Student Full Name]</p>
+              <p class="person-role">PhD Student · [Year] year</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">[Research focus]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNDERGRADS -->
+    <section class="people-section" style="padding-bottom:40px;">
+      <div class="container">
+        <p class="section-label">Undergraduate Researchers</p>
+        <div class="people-grid" style="margin-top:24px;">
+          <!-- REPLACE: add undergrad entries as needed -->
+          <div class="person-card fade-in">
+            <div class="person-photo-wrap">
+              <img src="images/undergrad-1.jpg" alt="[Name]" class="person-photo"
+                   onerror="this.src='https://placehold.co/400x400/e4e6ea/6b7280?text=[Photo]'" />
+            </div>
+            <div class="person-info">
+              <p class="person-name">[Student Full Name]</p>
+              <p class="person-role">Undergraduate Researcher</p>
+              <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;">[Major · Yale Class of YYYY]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALUMNI — pre-Yale collaborators listed as known co-authors -->
+    <section class="people-section" style="background:var(--surface); padding-bottom:80px;">
+      <div class="container">
+        <p class="section-label">Notable Alumni &amp; Collaborators</p>
+        <div style="margin-top:24px; display:grid; gap:0;">
+          <!-- REPLACE: update with lab alumni as they graduate/leave -->
+          <div style="display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--border);">
+            <div><p style="font-weight:500;">[Alumni Name]</p><p style="font-size:13px;color:var(--ink-soft);">[Role, Year] · Now: [Current Position]</p></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--border);">
+            <div><p style="font-weight:500;">[Alumni Name]</p><p style="font-size:13px;color:var(--ink-soft);">[Role, Year] · Now: [Current Position]</p></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--border);">
+            <div><p style="font-weight:500;">Dr. Aurelien Pelissier</p><p style="font-size:13px;color:var(--ink-soft);">PhD Advisee (IBM Research / ETH period) · Multiple co-authored publications</p></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--border);">
+            <div><p style="font-weight:500;">Dr. Matteo Manica</p><p style="font-size:13px;color:var(--ink-soft);">PhD Advisee 2016–2020 (IBM Research period)</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">Rodríguez Martínez Lab</p>
+        <p class="footer-address">Department of Biomedical Informatics &amp; Data Science<br/>Yale School of Medicine<br/>[Building &amp; Room — add when known]<br/>New Haven, CT 06510</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a><a href="people.html">People</a>
+        <a href="research.html">Research</a><a href="publications.html">Publications</a>
+        <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Rodríguez Martínez Lab · Yale University</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

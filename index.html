@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodríguez Martínez Lab — Yale School of Medicine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">Rodríguez Martínez Lab</span>
+        <span class="logo-sub">Yale School of Medicine</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Department of Biomedical Informatics &amp; Data Science · Yale School of Medicine</p>
+      <h1 class="hero-title">
+        AI Meets the<br/>
+        <em>Immune System</em>
+      </h1>
+      <p class="hero-desc">We develop interpretable machine learning and mechanistic models to decode T and B cell function in cancer and autoimmune diseases — bridging deep learning, biophysics, and computational immunology.</p>
+      <div class="hero-actions">
+        <a href="research.html" class="btn btn-primary">Our Research</a>
+        <a href="people.html" class="btn btn-ghost">Meet the Team</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <section class="yale-strip">
+    <div class="yale-strip-inner">
+      <div class="yale-badge">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#fff" stroke-width="1.5"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="11" fill="#fff" font-family="serif" font-weight="bold">Y</text></svg>
+        <span>Yale University · New Haven, CT</span>
+      </div>
+      <div class="yale-stats">
+        <div class="stat"><span class="stat-num">[#]</span><span class="stat-label">Lab Members</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Publications</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">2024</span><span class="stat-label">Joined Yale</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">4,000+</span><span class="stat-label">Citations</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PI SPOTLIGHT -->
+  <section class="pi-section">
+    <div class="container">
+      <div class="pi-grid">
+        <div class="pi-image-wrap">
+          <div class="pi-image-frame">
+            <!-- REPLACE: save your photo as images/pi-photo.jpg -->
+            <img src="images/pi-photo.jpg" alt="Prof. María Rodríguez Martínez" class="pi-photo"
+                 onerror="this.src='https://placehold.co/480x600/00356B/ffffff?text=Photo+Coming+Soon'" />
+          </div>
+          <div class="pi-image-accent"></div>
+        </div>
+        <div class="pi-text">
+          <p class="section-label">Principal Investigator</p>
+          <h2 class="pi-name">Prof. María Rodríguez Martínez</h2>
+          <p class="pi-title-line">Associate Professor · Dept. of Biomedical Informatics &amp; Data Science · Yale School of Medicine</p>
+          <p class="pi-bio">Prof. Rodríguez Martínez earned her PhD in physics at the Institut d'Astrophysique de Paris before transitioning to computational biology during postdoctoral work at the Weizmann Institute of Science (Israel) and Columbia University (USA). She then spent over a decade at IBM Research Europe (Switzerland) as Technical Leader of Systems Biology, building a world-leading team in computational systems biology and leading major EU-funded consortia on prostate and pediatric cancers.</p>
+          <p class="pi-bio">She joined Yale School of Medicine as Associate Professor in the new Department of Biomedical Informatics &amp; Data Science in May 2024. Her research integrates mechanistic models and interpretable deep learning — including transformers, structural predictors, and generative AI — to decode how immune receptors function in cancer and autoimmune disease, and to guide the design of novel cell-based immunotherapies.</p>
+          <p class="pi-bio">She serves on the editorial boards of <em>ImmunoInformatics</em>, <em>Frontiers in Systems Biology</em>, <em>BMC Bioinformatics</em>, and <em>IEEE Transactions on Molecular, Biological, and Multi-Scale Communications</em>, and is a frequent speaker at ISMB, ECCB, and the Society for Mathematical Biology.</p>
+          <div class="pi-links">
+            <a href="people.html#pi" class="link-arrow">Full Profile →</a>
+            <a href="https://medicine.yale.edu/profile/maria-rodriguezmartinez/" target="_blank" class="link-arrow">Yale Profile →</a>
+            <a href="https://scholar.google.com/citations?user=PjKglDoAAAAJ" target="_blank" class="link-arrow">Google Scholar →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS + PUBLICATIONS -->
+  <section class="news-pubs">
+    <div class="container">
+      <div class="np-grid">
+
+        <div class="np-col">
+          <div class="section-header">
+            <p class="section-label">Latest Updates</p>
+            <h2 class="section-title">News</h2>
+          </div>
+          <ul class="news-list">
+            <!-- REPLACE: fill in with real news as it happens -->
+            <li class="news-item">
+              <span class="news-date">[Mon YYYY]</span>
+              <div><p class="news-headline">[News item — new paper, award, conference talk, lab member joining, etc.]</p></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">[Mon YYYY]</span>
+              <div>
+                <p class="news-headline">[News item — new paper, award, conference talk, lab member joining, etc.]</p>
+                <a href="publications.html" class="inline-link">Read →</a>
+              </div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">[Mon YYYY]</span>
+              <div><p class="news-headline">[News item — new paper, award, conference talk, lab member joining, etc.]</p></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">2025</span>
+              <div>
+                <p class="news-headline">New paper in <em>Science Advances</em>: dissecting CAR signaling architectures on T cell activation and persistence using pooled screens and single-cell sequencing.</p>
+                <a href="publications.html" class="inline-link">Read →</a>
+              </div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">May 2024</span>
+              <div>
+                <p class="news-headline">Prof. Rodríguez Martínez joins Yale School of Medicine as Associate Professor in the new Department of Biomedical Informatics &amp; Data Science.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="np-col">
+          <div class="section-header">
+            <p class="section-label">Selected Work</p>
+            <h2 class="section-title">Recent Publications</h2>
+          </div>
+          <ul class="pub-list">
+            <!-- REPLACE: swap [YYYY] placeholders with your most recent papers -->
+            <li class="pub-item">
+              <div class="pub-year">[YYYY]</div>
+              <div class="pub-body">
+                <p class="pub-title">[Most recent publication — add from Google Scholar]</p>
+                <p class="pub-authors">[Authors] · Rodríguez Martínez M</p>
+                <p class="pub-journal"><em>[Journal]</em> · [Vol, pages or DOI]</p>
+                <div class="pub-tags"><span class="tag">[Topic]</span></div>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-year">2025</div>
+              <div class="pub-body">
+                <p class="pub-title">Dissecting the role of CAR signaling architectures on T cell activation and persistence using pooled screens and single-cell sequencing</p>
+                <p class="pub-authors">Castellanos-Rueda R, Wang K, Forster J, Driessen A, Frank J, Martínez M, Reddy S</p>
+                <p class="pub-journal"><em>Science Advances</em> · 11: eadp4008</p>
+                <div class="pub-tags"><span class="tag">CAR-T</span><span class="tag">Single-cell</span></div>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-year">2024</div>
+              <div class="pub-body">
+                <p class="pub-title">BACH1 as a key driver in rheumatoid arthritis fibroblast-like synoviocytes identified through gene network analysis</p>
+                <p class="pub-authors">Pelissier A, Laragione T, Harris C, Rodríguez Martínez M, Gulko P</p>
+                <p class="pub-journal"><em>Life Science Alliance</em> · 8: e202402808</p>
+                <div class="pub-tags"><span class="tag">Autoimmunity</span><span class="tag">Gene Networks</span></div>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-year">2024</div>
+              <div class="pub-body">
+                <p class="pub-title">Lessons learned from the IMMREP23 TCR-epitope prediction challenge</p>
+                <p class="pub-authors">Nielsen M, Eugster A, Jensen M, …, Rodríguez Martínez M, et al.</p>
+                <p class="pub-journal"><em>ImmunoInformatics</em> · 16: 100045</p>
+                <div class="pub-tags"><span class="tag">TCR</span><span class="tag">Benchmarking</span></div>
+              </div>
+            </li>
+          </ul>
+          <a href="publications.html" class="btn btn-outline mt-24">View All Publications →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH TEASER -->
+  <section class="research-teaser">
+    <div class="container">
+      <div class="section-header centered">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Research Areas</h2>
+      </div>
+      <div class="research-cards">
+        <a href="research.html#immunology" class="rcard">
+          <div class="rcard-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="6" x2="16" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="20" x2="16" y2="26" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="16" x2="12" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="16" x2="26" y2="16" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Computational Immunology</h3>
+          <p>Mechanistic and AI models of T and B cell function in cancer and complex diseases such as autoimmune disorders.</p>
+          <span class="rcard-arrow">→</span>
+        </a>
+        <a href="research.html#interpretable-ai" class="rcard">
+          <div class="rcard-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="5" y="12" width="6" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="8" width="6" height="14" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="21" y="5" width="6" height="17" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Interpretable Deep Learning</h3>
+          <p>Methods that achieve high accuracy while uncovering the biological rules behind model predictions — beyond black-box AI.</p>
+          <span class="rcard-arrow">→</span>
+        </a>
+        <a href="research.html#cancer" class="rcard">
+          <div class="rcard-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 5C16 5 8 10 8 18C8 22.4 11.6 26 16 26C20.4 26 24 22.4 24 18C24 10 16 5 16 5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 26V18" stroke="currentColor" stroke-width="1.5"/><path d="M12 15L16 18L20 15" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Cancer Immunotherapy</h3>
+          <p>Design and optimization of CAR-T cells and other cell-based immunotherapies using AI-guided receptor architecture screening.</p>
+          <span class="rcard-arrow">→</span>
+        </a>
+        <a href="research.html#generative" class="rcard">
+          <div class="rcard-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L16 8L24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 19H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Generative Protein Models</h3>
+          <p>Transformer-based and structural AI for immune receptor design, drug sensitivity prediction, and multi-omics integration.</p>
+          <span class="rcard-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN US CTA -->
+  <section class="join-cta">
+    <div class="join-inner">
+      <div class="join-text">
+        <p class="section-label light">Join the Lab</p>
+        <h2>We're always looking for<br/>curious, driven scientists.</h2>
+        <p>Open positions for postdocs, graduate students, and undergraduates. We especially welcome scientists from quantitative backgrounds — physics, mathematics, computer science — with an interest in biology and immunology.</p>
+      </div>
+      <a href="contact.html" class="btn btn-light">Get in Touch →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">Rodríguez Martínez Lab</p>
+        <!-- REPLACE: add building/room once known -->
+        <p class="footer-address">Department of Biomedical Informatics &amp; Data Science<br/>Yale School of Medicine<br/>[Building &amp; Room — add when known]<br/>New Haven, CT 06510</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Rodríguez Martínez Lab · Yale University</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

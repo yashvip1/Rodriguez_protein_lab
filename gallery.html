@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Rodríguez Martínez Lab · Yale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-caption { text-align:center; font-size:12px; color:var(--ink-soft); margin-top:6px; }
+    .gallery-item-wrap { display:flex; flex-direction:column; }
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); z-index:999; align-items:center; justify-content:center; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:90vw; max-height:88vh; border-radius:6px; box-shadow:0 24px 80px rgba(0,0,0,.5); }
+    .lightbox-close { position:absolute; top:20px; right:28px; color:#fff; font-size:32px; cursor:pointer; background:none; border:none; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">Rodríguez Martínez Lab</span>
+        <span class="logo-sub">Yale School of Medicine</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-eyebrow">Life in the Lab</p>
+      <h1>Gallery</h1>
+      <p>From lab meetings to conferences and retreats — a window into our community and science.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="gallery-section">
+      <div class="container">
+
+        <p class="section-label" style="margin-bottom:28px;">Lab &amp; Team</p>
+        <!-- REPLACE: swap all placeholder images with real lab photos.
+             Save them in an images/ folder. Suggested filenames listed in each src. -->
+        <div class="gallery-grid">
+
+          <div class="gallery-item-wrap" style="grid-column:span 2;">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/gallery-group.jpg" alt="Lab group photo"
+                   onerror="this.src='https://placehold.co/1200x600/00356B/ffffff?text=Lab+Group+Photo+—+Add+Yours'" />
+            </div>
+            <p class="gallery-caption">Lab group photo · [Year] — REPLACE with your team photo</p>
+          </div>
+
+          <div class="gallery-item-wrap">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/gallery-lab-1.jpg" alt="Lab space"
+                   onerror="this.src='https://placehold.co/600x450/286DC0/ffffff?text=Lab+Space'" />
+            </div>
+            <p class="gallery-caption">[Caption — e.g., Lab space at Yale School of Medicine]</p>
+          </div>
+
+          <div class="gallery-item-wrap">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/gallery-lab-2.jpg" alt="Lab work"
+                   onerror="this.src='https://placehold.co/600x450/003f7f/ffffff?text=Lab+Work'" />
+            </div>
+            <p class="gallery-caption">[Caption — e.g., Team working on a project]</p>
+          </div>
+
+          <div class="gallery-item-wrap">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/gallery-lab-3.jpg" alt="Computing"
+                   onerror="this.src='https://placehold.co/600x450/C0973B/ffffff?text=Computational+Work'" />
+            </div>
+            <p class="gallery-caption">[Caption — e.g., Computational analysis session]</p>
+          </div>
+
+          <div class="gallery-item-wrap" style="grid-column:span 2;">
+            <div class="gallery-item" onclick="openLightbox(this)" style="aspect-ratio:16/9;">
+              <img src="images/gallery-yale.jpg" alt="Yale School of Medicine"
+                   onerror="this.src='https://placehold.co/1200x675/00356B/ffffff?text=Yale+School+of+Medicine'" />
+            </div>
+            <p class="gallery-caption">Yale School of Medicine · New Haven, CT</p>
+          </div>
+
+        </div>
+
+        <p class="section-label" style="margin: 72px 0 28px;">Events, Conferences &amp; Outreach</p>
+        <div class="gallery-grid">
+
+          <div class="gallery-item-wrap">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/gallery-conf-1.jpg" alt="Conference"
+                   onerror="this.src='https://placehold.co/600x450/286DC0/ffffff?text=ISMB+/+ECCB'" />
+            </div>
+            <p class="gallery-caption">[Caption — e.g., ISMB [Year] · [City]]</p>
+          </div>
+
+          <div class="gallery-item-wrap">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/gallery-conf-2.jpg" alt="Seminar"
+                   onerror="this.src='https://placehold.co/600x450/003f7f/ffffff?text=Talk+/+Seminar'" />
+            </div>
+            <p class="gallery-caption">[Caption — e.g., Talk at [Conference/Seminar, Year]]</p>
+          </div>
+
+          <div class="gallery-item-wrap">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/gallery-outreach.jpg" alt="Outreach"
+                   onerror="this.src='https://placehold.co/600x450/C0973B/ffffff?text=Outreach+/+Teaching'" />
+            </div>
+            <p class="gallery-caption">[Caption — e.g., Outreach event / Teaching session]</p>
+          </div>
+
+        </div>
+
+        <div style="margin-top:56px; padding:32px; background:var(--surface); border-radius:var(--r-lg); text-align:center;">
+          <p style="color:var(--ink-soft); font-size:14px;">
+            📸 To add your photos: save them in the <code style="background:var(--border); padding:2px 6px; border-radius:4px;">images/</code> folder and update the <code style="background:var(--border); padding:2px 6px; border-radius:4px;">src</code> attributes in <code style="background:var(--border); padding:2px 6px; border-radius:4px;">gallery.html</code>. Click any image to view it enlarged.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">Rodríguez Martínez Lab</p>
+        <p class="footer-address">Department of Biomedical Informatics &amp; Data Science<br/>Yale School of Medicine<br/>[Building &amp; Room — add when known]<br/>New Haven, CT 06510</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a><a href="people.html">People</a>
+        <a href="research.html">Research</a><a href="publications.html">Publications</a>
+        <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Rodríguez Martínez Lab · Yale University</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

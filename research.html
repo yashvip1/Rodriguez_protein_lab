@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Rodríguez Martínez Lab · Yale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">Rodríguez Martínez Lab</span>
+        <span class="logo-sub">Yale School of Medicine</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-eyebrow">Science</p>
+      <h1>Research</h1>
+      <p>We integrate state-of-the-art AI with mechanistic models of the immune system to advance cancer immunotherapy and understand autoimmune disease.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="research-section">
+      <div class="container">
+
+        <!-- Overview -->
+        <div class="fade-in" style="max-width:760px; margin:0 auto 80px; text-align:center;">
+          <p style="font-size:16px; color:var(--ink-mid); line-height:1.85;">Our lab bridges deep learning — transformers, structural predictors, generative models — with biophysics and computational immunology. A unifying theme is <strong>interpretability</strong>: we build models that are not only accurate but that reveal the biological rules behind their predictions, enabling mechanistic insight alongside computational power.</p>
+        </div>
+
+        <!-- Block 1 -->
+        <div class="research-block fade-in" id="immunology">
+          <div class="research-block-grid">
+            <div class="research-img">
+              <!-- REPLACE: swap with a relevant figure from the lab or a licensed image -->
+              <img src="images/research-immunology.jpg" alt="Computational Immunology"
+                   onerror="this.src='https://placehold.co/800x600/00356B/ffffff?text=Computational+Immunology'" />
+            </div>
+            <div class="research-text">
+              <p class="section-label">Research Area 01</p>
+              <h2>Computational Immunology</h2>
+              <p>We develop computational models to understand T and B cell function in the context of complex diseases — particularly cancer and autoimmune disorders such as rheumatoid arthritis. A major focus is decoding the specificity of T cell receptors (TCRs) and how B cells evolve in germinal centers.</p>
+              <p>We use mechanistic stochastic models to recapitulate B cell development and affinity maturation, and deep learning models — including transformer architectures — to predict TCR-epitope binding. We actively participate in community benchmarking challenges (e.g., IMMREP) to rigorously evaluate and improve these methods.</p>
+              <p><!-- REPLACE: add a brief sentence about a current specific project in this area if desired --></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="research-block fade-in" id="interpretable-ai">
+          <div class="research-block-grid reverse">
+            <div class="research-img">
+              <!-- REPLACE: swap with a relevant figure -->
+              <img src="images/research-xai.jpg" alt="Interpretable Deep Learning"
+                   onerror="this.src='https://placehold.co/800x600/286DC0/ffffff?text=Interpretable+Deep+Learning'" />
+            </div>
+            <div class="research-text">
+              <p class="section-label">Research Area 02</p>
+              <h2>Interpretable Deep Learning</h2>
+              <p>Many deep learning models operate as black boxes — they achieve high predictive accuracy but provide little insight into <em>why</em> a prediction is made. This is a critical limitation in biology and medicine, where understanding mechanism is often as important as prediction.</p>
+              <p>We design architectures — including multi-modal attention-based networks and physics-informed models — that highlight the genetic and chemical patterns most informative for a given prediction. We have applied this to anticancer compound sensitivity (PaccMann), drug discovery via reinforcement learning, and immune receptor binding.</p>
+              <p>This line of work ensures our models can be trusted, interrogated, and used to generate hypotheses for experimental follow-up.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="research-block fade-in" id="cancer">
+          <div class="research-block-grid">
+            <div class="research-img">
+              <!-- REPLACE: swap with a relevant figure -->
+              <img src="images/research-cancer.jpg" alt="Cancer Immunotherapy"
+                   onerror="this.src='https://placehold.co/800x600/C0973B/ffffff?text=Cancer+Immunotherapy'" />
+            </div>
+            <div class="research-text">
+              <p class="section-label">Research Area 03</p>
+              <h2>Cancer Immunotherapy &amp; Precision Medicine</h2>
+              <p>A central goal of our lab is to advance the design of cell-based immunotherapies for cancer. We use pooled screening approaches combined with single-cell sequencing to dissect how different CAR-T cell signaling architectures affect T cell activation, persistence, and anti-tumor efficacy.</p>
+              <p>We also develop multi-omics computational approaches for cancer patient stratification — work pioneered during our IBM Research phase on prostate and pediatric cancer — integrating genomic, transcriptomic, epigenetic, and proteomic data to predict clinical outcomes and guide treatment decisions.</p>
+              <p><!-- REPLACE: add a brief sentence about a current Yale-specific project if desired --></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="research-block fade-in" id="generative">
+          <div class="research-block-grid reverse">
+            <div class="research-img">
+              <!-- REPLACE: swap with a relevant figure -->
+              <img src="images/research-generative.jpg" alt="Generative Protein Models"
+                   onerror="this.src='https://placehold.co/800x600/003f7f/ffffff?text=Generative+Protein+Models'" />
+            </div>
+            <div class="research-text">
+              <p class="section-label">Research Area 04</p>
+              <h2>Generative Protein &amp; Drug Models</h2>
+              <p>The recent revolution in protein language models and structural AI (AlphaFold, ESMFold, RoseTTAFold) opens new possibilities for immune receptor engineering. We develop and apply generative models for <em>in silico</em> design of antibodies, TCRs, and anticancer compounds with desired properties.</p>
+              <p>We combine deep generative models with molecular docking and multi-omics constraints to produce candidate compounds that are both chemically feasible and biologically motivated. A key emphasis is incorporating the genetic profile of target diseases — moving beyond generic generative approaches toward truly personalized drug design.</p>
+              <p><!-- REPLACE: add detail about a current specific project if desired --></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Funding -->
+        <div class="fade-in" style="background:var(--surface); border-radius:var(--r-lg); padding:48px; margin-bottom:40px;">
+          <p class="section-label">Support</p>
+          <h2 style="font-family:var(--font-serif); font-weight:300; font-size:28px; margin-bottom:24px;">Funding</h2>
+          <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:16px;">
+            <!-- REPLACE: update with real grants as they are awarded -->
+            <div style="background:var(--white); border:1.5px solid var(--border); border-radius:var(--r); padding:20px;">
+              <p style="font-weight:500; margin-bottom:4px;">[Grant Agency &amp; Number]</p>
+              <p style="font-size:13px; color:var(--ink-soft);">[Grant Title]</p>
+            </div>
+            <div style="background:var(--white); border:1.5px solid var(--border); border-radius:var(--r); padding:20px;">
+              <p style="font-weight:500; margin-bottom:4px;">[Grant Agency &amp; Number]</p>
+              <p style="font-size:13px; color:var(--ink-soft);">[Grant Title]</p>
+            </div>
+            <div style="background:var(--white); border:1.5px solid var(--border); border-radius:var(--r); padding:20px;">
+              <p style="font-weight:500; margin-bottom:4px;">Yale School of Medicine</p>
+              <p style="font-size:13px; color:var(--ink-soft);">Start-up funding · Dept. of Biomedical Informatics &amp; Data Science</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">Rodríguez Martínez Lab</p>
+        <p class="footer-address">Department of Biomedical Informatics &amp; Data Science<br/>Yale School of Medicine<br/>[Building &amp; Room — add when known]<br/>New Haven, CT 06510</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a><a href="people.html">People</a>
+        <a href="research.html">Research</a><a href="publications.html">Publications</a>
+        <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Rodríguez Martínez Lab · Yale University</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
