@@ -7,6 +7,90 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Image Gallery / Slider ── */
+    .img-gallery {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: var(--r-lg, 12px);
+      background: #000;
+    }
+    .img-gallery img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .img-gallery img.active {
+      opacity: 1;
+    }
+    /* single image — no overlay chrome needed */
+    .img-gallery.single img {
+      opacity: 1;
+    }
+    .gallery-nav {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 10;
+    }
+    .gallery-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.45);
+      cursor: pointer;
+      transition: background 0.25s;
+      border: none;
+      padding: 0;
+    }
+    .gallery-dot.active {
+      background: #fff;
+    }
+    .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.35);
+      border: none;
+      color: #fff;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+    .gallery-arrow:hover { background: rgba(0,0,0,0.6); }
+    .gallery-arrow.prev { left: 10px; }
+    .gallery-arrow.next { right: 10px; }
+    .gallery-count {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-family: var(--font-mono, monospace);
+      letter-spacing: 0.04em;
+      z-index: 10;
+    }
+  </style>
 </head>
 <body>
 
@@ -45,74 +129,108 @@
           <p style="font-size:16px; color:var(--ink-mid); line-height:1.85;">Our lab bridges deep learning — transformers, structural predictors, generative models — with biophysics and computational immunology. A unifying theme is <strong>interpretability</strong>: we build models that are not only accurate but that reveal the biological rules behind their predictions, enabling mechanistic insight alongside computational power.</p>
         </div>
 
-        <!-- Block 1 -->
+        <!-- Block 1 · Computational Immunology -->
         <div class="research-block fade-in" id="immunology">
           <div class="research-block-grid">
             <div class="research-img">
-              <!-- REPLACE: swap with a relevant figure from the lab or a licensed image -->
-              <img src="images/research-immunology.jpg" alt="Computational Immunology"
-                   onerror="this.src='https://placehold.co/800x600/00356B/ffffff?text=Computational+Immunology'" />
+              <div class="img-gallery" id="gallery-immunology">
+                <img src="images/Graph-Based Antibody Affinity Maturation_1.png"
+                     alt="Graph-Based Antibody Affinity Maturation" class="active" />
+                <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+                <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+                <div class="gallery-nav">
+                  <button class="gallery-dot active" aria-label="Image 1"></button>
+                </div>
+                <span class="gallery-count">1 / 1</span>
+              </div>
             </div>
             <div class="research-text">
               <p class="section-label">Research Area 01</p>
               <h2>Computational Immunology</h2>
               <p>We develop computational models to understand T and B cell function in the context of complex diseases — particularly cancer and autoimmune disorders such as rheumatoid arthritis. A major focus is decoding the specificity of T cell receptors (TCRs) and how B cells evolve in germinal centers.</p>
-              <p>We use mechanistic stochastic models to recapitulate B cell development and affinity maturation, and deep learning models — including transformer architectures — to predict TCR-epitope binding. We actively participate in community benchmarking challenges (e.g., IMMREP) to rigorously evaluate and improve these methods.</p>
-              <p><!-- REPLACE: add a brief sentence about a current specific project in this area if desired --></p>
+              <p>We use mechanistic stochastic models to recapitulate B cell development and affinity maturation — including graph-based models of antibody affinity maturation — and deep learning models to predict TCR-epitope binding. We actively participate in community benchmarking challenges (e.g., IMMREP) to rigorously evaluate and improve these methods.</p>
             </div>
           </div>
         </div>
 
-        <!-- Block 2 -->
+        <!-- Block 2 · Interpretable Deep Learning -->
         <div class="research-block fade-in" id="interpretable-ai">
           <div class="research-block-grid reverse">
             <div class="research-img">
-              <!-- REPLACE: swap with a relevant figure -->
-              <img src="images/research-xai.jpg" alt="Interpretable Deep Learning"
-                   onerror="this.src='https://placehold.co/800x600/286DC0/ffffff?text=Interpretable+Deep+Learning'" />
+              <div class="img-gallery" id="gallery-xai">
+                <img src="images/Fine-tuning AI models to decode immune recognition_1.png"
+                     alt="Fine-tuning AI models to decode immune recognition – figure 1" class="active" />
+                <img src="images/Fine-tuning AI models to decode immune recognition_2.png"
+                     alt="Fine-tuning AI models to decode immune recognition – figure 2" />
+                <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+                <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+                <div class="gallery-nav">
+                  <button class="gallery-dot active" aria-label="Image 1"></button>
+                  <button class="gallery-dot" aria-label="Image 2"></button>
+                </div>
+                <span class="gallery-count">1 / 2</span>
+              </div>
             </div>
             <div class="research-text">
               <p class="section-label">Research Area 02</p>
               <h2>Interpretable Deep Learning</h2>
               <p>Many deep learning models operate as black boxes — they achieve high predictive accuracy but provide little insight into <em>why</em> a prediction is made. This is a critical limitation in biology and medicine, where understanding mechanism is often as important as prediction.</p>
-              <p>We design architectures — including multi-modal attention-based networks and physics-informed models — that highlight the genetic and chemical patterns most informative for a given prediction. We have applied this to anticancer compound sensitivity (PaccMann), drug discovery via reinforcement learning, and immune receptor binding.</p>
+              <p>We design architectures — including multi-modal attention-based networks and physics-informed models — that highlight the genetic and chemical patterns most informative for a given prediction. A key recent focus is fine-tuning large language models to decode immune recognition, making predictions interpretable at the level of amino-acid sequence features.</p>
               <p>This line of work ensures our models can be trusted, interrogated, and used to generate hypotheses for experimental follow-up.</p>
             </div>
           </div>
         </div>
 
-        <!-- Block 3 -->
+        <!-- Block 3 · Cancer Immunotherapy -->
         <div class="research-block fade-in" id="cancer">
           <div class="research-block-grid">
             <div class="research-img">
-              <!-- REPLACE: swap with a relevant figure -->
-              <img src="images/research-cancer.jpg" alt="Cancer Immunotherapy"
-                   onerror="this.src='https://placehold.co/800x600/C0973B/ffffff?text=Cancer+Immunotherapy'" />
+              <div class="img-gallery" id="gallery-cancer">
+                <img src="images/T-cell Structures and Sequences for Cancer and Autoimmunity_1.png"
+                     alt="T-cell Structures and Sequences for Cancer and Autoimmunity – figure 1" class="active" />
+                <img src="images/T-cell Structures and Sequences for Cancer and Autoimmunity_2.png"
+                     alt="T-cell Structures and Sequences for Cancer and Autoimmunity – figure 2" />
+                <img src="images/T-cell Structures and Sequences for Cancer and Autoimmunity_3.png"
+                     alt="T-cell Structures and Sequences for Cancer and Autoimmunity – figure 3" />
+                <img src="images/T-cell Structures and Sequences for Cancer and Autoimmunity_4.png"
+                     alt="T-cell Structures and Sequences for Cancer and Autoimmunity – figure 4" />
+                <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+                <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+                <div class="gallery-nav">
+                  <button class="gallery-dot active" aria-label="Image 1"></button>
+                  <button class="gallery-dot" aria-label="Image 2"></button>
+                  <button class="gallery-dot" aria-label="Image 3"></button>
+                  <button class="gallery-dot" aria-label="Image 4"></button>
+                </div>
+                <span class="gallery-count">1 / 4</span>
+              </div>
             </div>
             <div class="research-text">
               <p class="section-label">Research Area 03</p>
               <h2>Cancer Immunotherapy &amp; Precision Medicine</h2>
               <p>A central goal of our lab is to advance the design of cell-based immunotherapies for cancer. We use pooled screening approaches combined with single-cell sequencing to dissect how different CAR-T cell signaling architectures affect T cell activation, persistence, and anti-tumor efficacy.</p>
-              <p>We also develop multi-omics computational approaches for cancer patient stratification — work pioneered during our IBM Research phase on prostate and pediatric cancer — integrating genomic, transcriptomic, epigenetic, and proteomic data to predict clinical outcomes and guide treatment decisions.</p>
-              <p><!-- REPLACE: add a brief sentence about a current Yale-specific project if desired --></p>
+              <p>A major project focuses on T-cell structures and sequences in cancer and autoimmunity — leveraging structural AI alongside sequence-based models to identify the TCR features that govern antigen recognition and drive disease-relevant T cell responses.</p>
+              <p>We also develop multi-omics computational approaches for cancer patient stratification, integrating genomic, transcriptomic, epigenetic, and proteomic data to predict clinical outcomes and guide treatment decisions.</p>
             </div>
           </div>
         </div>
 
-        <!-- Block 4 -->
+        <!-- Block 4 · Generative Protein & Drug Models -->
         <div class="research-block fade-in" id="generative">
           <div class="research-block-grid reverse">
             <div class="research-img">
-              <!-- REPLACE: swap with a relevant figure -->
-              <img src="images/research-generative.jpg" alt="Generative Protein Models"
-                   onerror="this.src='https://placehold.co/800x600/003f7f/ffffff?text=Generative+Protein+Models'" />
+              <div class="img-gallery single" id="gallery-generative">
+                <img src="images/Protein_placeholder.png"
+                     alt="Generative Protein Models"
+                     class="active"
+                     onerror="this.src='https://placehold.co/800x600/003f7f/ffffff?text=Generative+Protein+Models'" />
+              </div>
             </div>
             <div class="research-text">
               <p class="section-label">Research Area 04</p>
               <h2>Generative Protein &amp; Drug Models</h2>
               <p>The recent revolution in protein language models and structural AI (AlphaFold, ESMFold, RoseTTAFold) opens new possibilities for immune receptor engineering. We develop and apply generative models for <em>in silico</em> design of antibodies, TCRs, and anticancer compounds with desired properties.</p>
               <p>We combine deep generative models with molecular docking and multi-omics constraints to produce candidate compounds that are both chemically feasible and biologically motivated. A key emphasis is incorporating the genetic profile of target diseases — moving beyond generic generative approaches toward truly personalized drug design.</p>
-              <p><!-- REPLACE: add detail about a current specific project if desired --></p>
             </div>
           </div>
         </div>
@@ -122,7 +240,6 @@
           <p class="section-label">Support</p>
           <h2 style="font-family:var(--font-serif); font-weight:300; font-size:28px; margin-bottom:24px;">Funding</h2>
           <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:16px;">
-            <!-- REPLACE: update with real grants as they are awarded -->
             <div style="background:var(--white); border:1.5px solid var(--border); border-radius:var(--r); padding:20px;">
               <p style="font-weight:500; margin-bottom:4px;">[Grant Agency &amp; Number]</p>
               <p style="font-size:13px; color:var(--ink-soft);">[Grant Title]</p>
@@ -158,5 +275,42 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    // ── Gallery initialiser ──────────────────────────────────────────────────
+    document.querySelectorAll('.img-gallery').forEach(gallery => {
+      const imgs   = gallery.querySelectorAll('img');
+      const dots   = gallery.querySelectorAll('.gallery-dot');
+      const count  = gallery.querySelector('.gallery-count');
+      const prev   = gallery.querySelector('.gallery-arrow.prev');
+      const next   = gallery.querySelector('.gallery-arrow.next');
+      const total  = imgs.length;
+
+      // Single-image galleries need no controls
+      if (total <= 1) {
+        if (prev)  prev.style.display  = 'none';
+        if (next)  next.style.display  = 'none';
+        if (count) count.style.display = 'none';
+        return;
+      }
+
+      let current = 0;
+
+      function goTo(idx) {
+        imgs[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (idx + total) % total;
+        imgs[current].classList.add('active');
+        dots[current].classList.add('active');
+        if (count) count.textContent = `${current + 1} / ${total}`;
+      }
+
+      prev && prev.addEventListener('click', () => goTo(current - 1));
+      next && next.addEventListener('click', () => goTo(current + 1));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+      // Auto-advance every 5 s
+      setInterval(() => goTo(current + 1), 5000);
+    });
+  </script>
 </body>
 </html>
