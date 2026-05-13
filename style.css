@@ -318,6 +318,22 @@ ul { list-style: none; }
 .rcard-arrow { margin-top: 20px; font-size: 18px; color: var(--yale-blue); opacity: 0; transform: translateX(-8px); transition: all .25s; }
 .rcard:hover .rcard-arrow { opacity: 1; transform: translateX(0); }
 
+/* =======================
+   ADDITIONAL STYLES
+   Add these to your existing style.css
+   ======================= */
+ 
+/* Video background for hero */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 /* ── Join CTA ───────────────────────────────────────────── */
 .join-cta { background: linear-gradient(130deg, var(--yale-blue) 0%, #004e9a 100%); padding: 90px 0; }
 .join-inner {
